@@ -1,0 +1,11 @@
+
+tr{
+    height: 100px;
+    background-color: black;
+}
+
+td{
+    border-bottom: 3px solid black;
+    min-width: 400px;
+    background-color: black;
+}

@@ -1,0 +1,138 @@
+<script>
+
+    //let x = 10;
+    /*const c = 10;
+
+    const n = prompt("Add meg az n-et!");
+    console.log(n);
+
+    if (feltétel) {
+        ...
+    } else if () {
+
+    } else {
+
+    }
+
+    while () {
+
+    }
+
+    for (let i = 0; i < n; i++) {
+
+    }*/
+
+    function faktorialis(n) {
+        let fakt = 1;
+        for (let i = 2; i <= n; i++) {
+            fakt *= i;
+        }
+        return fakt;
+    }
+
+    //console.log(faktorialis(5));
+
+    function szazalekszamitas(szam, szazalek) {
+        return szam * szazalek / 100;
+    }
+    //console.log(szazalekszamitas(100, 20));
+
+    function lnko(a, b) {
+        if (a < b) {
+            let tmp = a;
+            a = b;
+            b = tmp;            
+        }
+        let maradek = a % b;
+        while (maradek > 0) {
+            a = b;
+            b = maradek;
+            maradek = a % b;
+        }
+        return b;
+    }
+    //console.log(lnko(12, 18));
+
+    let tomb = [1, 2, 3, 4, 5];
+    /*tomb[i];
+    tomb.length;
+    tomb.push(6);*/
+
+    function parosSzamokSzama(t) {
+        let db = 0;
+        for (let i = 0; i < t.length; i++) {
+            if (t[i] % 2 === 0) {
+                db++;
+            }
+        }
+        for (const szam of t) {
+            if (szam % 2 === 0) {
+                db++;
+            }
+        }
+        t.forEach((szam, j) => {
+            if (szam % 2 === 0) {
+                db++;
+            }
+            console.log(j);
+        });
+        return db;
+    }
+    //console.log(parosSzamokSzama(tomb));
+
+    const filmek = [{
+        cim: "Film Cim 1",
+        hossz: 120,
+        rendezoi: ["Rendezo1", "Rendezo2"],
+        gyartasiEv: 2020, 
+        szereplok: [
+            {
+                nev: "Szereplo nev 1",
+                szerep: "Szerep 1"
+            },  {
+                nev: "Szereplo nev 2",
+                szerep: "Szerep 2"
+            }
+        ]
+    }, {
+        cim: "Film Cim 2",
+        hossz: 90,
+        rendezoi: ["Rendezo1"],
+        gyartasiEv: 2000, 
+        szereplok: [
+            {
+                nev: "Szereplo nev 1",
+                szerep: "Szerep 1"
+            },  {
+                nev: "Szereplo nev 3",
+                szerep: "Szerep 3"
+            }
+        ]
+    }];
+
+    //a
+    filmek.forEach(film => {
+        console.log(film.cim);
+    });
+
+    //b
+    filmek.forEach(film => {
+        if (film.rendezoi.length > 1) {
+            console.log(film.cim);
+        }
+    });
+
+    //c
+    let max = 0;
+    for (let i = 1; i < filmek.length; i++) {
+        if (filmek[i].hossz > filmek[max].hossz) {
+            max = i;
+        }
+    }
+    console.log(filmek[max].cim);
+
+
+
+
+
+</script>
